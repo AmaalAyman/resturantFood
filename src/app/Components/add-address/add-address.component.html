@@ -1,0 +1,58 @@
+
+<section>
+
+
+    <div class="allform">
+        
+        <div class="wrapper six">
+            <div>
+                <h3 class="flicker">Add Your details:</h3>
+            </div>
+        </div>
+    
+        <form [formGroup]="addressForm" (ngSubmit)="handleForm()" >
+      
+          <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input formControlName="name" type="text" class="form-control" id="name" placeholder="Enter Your Name...">
+          </div>
+    
+          <div *ngIf="addressForm.get('name')?.errors && (addressForm.get('name')?.touched || addressForm.get('name')?.value.length > 0)" class="alert alert-danger p-2 small w-75 mx-auto">
+            <p *ngIf="addressForm.get('name')?.getError('required')">name is Required</p>
+          </div>
+          
+          <div class="mb-3">
+            <label for="" class="form-label">Details:</label>
+            <input formControlName="details" type="text" class="form-control" id="details" placeholder="Enter Your Details...">
+          </div>
+    
+          <div *ngIf="addressForm.get('details')?.errors && (addressForm.get('details')?.touched || addressForm.get('details')?.value.length > 0)" class="alert alert-danger p-2 small w-75 mx-auto">
+            <p *ngIf="addressForm.get('details')?.getError('required')">city is Required</p>
+          </div>
+    
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone:</label>
+            <input formControlName="phone" type="tel" class="form-control" id="phone" placeholder="Enter Your Phone...">
+          </div>
+    
+          <div *ngIf="addressForm.get('phone')?.errors && (addressForm.get('phone')?.touched || addressForm.get('phone')?.value.length > 0)" class="alert alert-danger p-2 small w-75 mx-auto">
+            <p *ngIf="addressForm.get('phone')?.getError('required')">city is Required</p>
+            <p *ngIf="addressForm.get('phone')?.getError('pattern')">Accept only egypt phone numbers</p>
+          </div>
+
+          <div class="mb-3">
+            <label for="city" class="form-label">City:</label>
+            <input formControlName="city" type="text" class="form-control" id="city" placeholder="Enter Your City...">
+          </div>
+    
+          <div *ngIf="addressForm.get('city')?.errors && (addressForm.get('city')?.touched || addressForm.get('city')?.value.length > 0)" class="alert alert-danger p-2 small w-75 mx-auto">
+            <p *ngIf="addressForm.get('city')?.getError('required')">city is Required</p>
+          </div>
+        
+          <button [disabled]="addressForm.invalid" type="submit" class="btn subbtn">Submit </button>
+        </form>
+        <div *ngIf="errormsg" class="alert alert-danger p-1 small w-100 mx-auto mt-5">
+            <h5 class="px-5 py-2 " >{{errormsg}}</h5>
+          </div>
+      </div>
+    </section>

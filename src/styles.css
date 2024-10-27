@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+
+
+:root {
+  --nav-color: #0e2431;
+  --nav-item: #e8d5b7;
+  --shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px -1px,
+    rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+    rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+  --font-family: "Encode Sans Expanded", sans-serif;
+  --rating-color: #ffc908;
+}
+
+
+
+
+.navbar{
+    background-color: var(--nav-color);
+}
+
+.icon{
+  color: var(--nav-item);
+  margin: 5px 30px;
+  font-size: xx-large;
+}
+
+.allbody{
+  background-color: var(--nav-item);
+  overflow-x: hidden;
+}
+
+
+
