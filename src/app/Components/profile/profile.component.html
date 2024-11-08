@@ -1,0 +1,25 @@
+
+<section>
+
+  <img src="https://toppng.com/uploads/preview/user-account-management-logo-user-icon-11562867145a56rus2zwu.png" alt="">
+
+    <div class="userinfo">
+        <h4 class="pt-4">Name: <span>{{user.name}}</span></h4>
+
+        <h4 >Email: <span>{{email}}</span></h4>
+
+        <h4 >Password: <span>{{pass.split('').slice(0,1)}} <span [style.visibility]="pass.length-1 >= num?'visibile':'hidden'" *ngFor="let num of [1,2,3,4,5,6,7,8,9,10]">*</span></span></h4>
+       
+        <h4 *ngIf="addID != '' ">Phone: <span>{{address.phone}}</span></h4>
+     
+        <h4 *ngIf="addID != '' ">Address: <span>{{address.city}} , {{address.details}}</span></h4>
+          
+    </div>
+
+    <div class="allbtns">
+      <button class="btn " routerLink="/changePass">Change Password</button>
+      <button class="btn " routerLink="/addAddress">Add Address</button>
+      <button class="btn" (click)="deleteAddress()" >Delete Address</button>
+    </div>
+
+</section>

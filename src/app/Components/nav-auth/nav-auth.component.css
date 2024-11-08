@@ -1,0 +1,25 @@
+
+  
+  .nav-link{
+      color: #e8d5b7;
+      margin-right: 20px;
+    }
+  
+    .nav-link:hover{
+      color: #dc921a;
+      margin-right: 20px;
+    }
+  
+    .navimg{
+      width: 50px;
+      height: 50px;
+      margin-left: 20px;
+  
+    }
+  
+    .bg-item{
+      background-color: #dfd3c3;
+      border-radius: 10px;
+      color: #0e2431;
+      font-weight: 500;
+    }

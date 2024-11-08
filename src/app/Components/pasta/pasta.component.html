@@ -1,0 +1,19 @@
+<section >  
+    <div class="row row-cols-4  g-5">
+        <div class="col" *ngFor="let item of pasta">
+      <div class="card h-100">
+        <img [src]="item.image_url" class="card-img-top  rounded-circle position-absolute" [alt]="item.title">
+        <div class="card-body ">
+          <div class="allcard">
+          <h5 class="card-title">{{item.title.split(" ").slice(0,3).join(" ")}}</h5>
+          <p class="card-text"><i [style.color]="(item.social_rank/10)/2 >= num?'yellow':'none'" *ngFor="let num of [1,2,3,4,5]" class="fa-solid fa-star"></i></p>
+          <h6> {{ (item.social_rank/0.7).toString().slice(5,8) | currency:'  ' }} EGP</h6>
+          <button class="btn addbtn" (click)="addCart(item)" >Add To Cart</button>
+        </div>
+        </div>
+      </div>
+    
+      </div>
+    </div>
+  
+  </section>

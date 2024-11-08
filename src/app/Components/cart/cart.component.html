@@ -1,0 +1,32 @@
+<section>
+    <div class="card">
+        <div class="row">
+            <div class="col-md-12 cart">
+                <div class="title">
+                    <div class="row">
+                        <div class="col-9">
+                        <div class="shopCart col mt-3"><h4><b>Shopping Cart</b></h4></div>
+                    </div>
+    
+                    <div class="float-end col-3">
+                    <div class="textCart col align-self-center text-right ms-5"><span class="cartInfo"> {{cartData.length}} </span> items</div>
+                        <div class="textCart col align-self-center text-right">TotalPrice: <span class="cartInfo"> {{totalPrice | currency:'  '}} EGP </span></div>
+                        </div>
+                    </div>
+                </div>    
+                <div class="row border-top border-bottom" *ngFor="let item of cartData">
+                    <div class="row col-10 main align-items-center">
+                        <div class="col-2"><img class="img-fluid w-100 h-100 rounded" [src]="item.image_url"></div>
+                        <div class="col">
+                            <div class="row titleItem">{{item.title.split(" ").slice(0,3).join(" ")}}</div>
+                            <div class="row cartInfo"> {{ (item.social_rank/0.7).toString().slice(5,8) | currency:'  ' }} EGP</div>
+                        </div>
+                       <div class="col-2 me-3">
+                        <div class="deletebtn col"> <span class="delete" (click)="deleteItem(item.recipe_id)">Delete Item</span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,284 @@
+<!--Home Carsoul-->
+<section>
+    <owl-carousel-o [options]="homeOptions">
+      <ng-template carouselSlide><img src="./assets/Food Images/Landing_image_Desktop.jpg"></ng-template>  
+      <ng-template carouselSlide><img src="./assets/Food Images/the-complete-paleo-diet-food-list-what-to-eat-and-what-to-avoid-0fb5d9b8293e4d6681094083d412bc96.jpg"></ng-template>  
+      <ng-template carouselSlide><img src="./assets/Food Images/content.jpg"></ng-template>  
+    </owl-carousel-o>
+    </section>
+    
+    <br>
+
+    <!--Pizza Carsoul-->
+<section class="detailsone">
+ 
+
+    <div class="wrapper two">
+      <div class="neon">
+        <h1 class="d-flex justify-content-center"><img class="img-icon" src="./assets/Food Images/pizza_15240392.gif">PIZZA</h1>
+      </div>
+  </div>
+  
+        
+    
+        <owl-carousel-o [options]="foodOptions">
+  
+        <ng-container *ngFor="let item of somePizza.slice(0,10)">
+          <ng-template carouselSlide >
+            <div class="card-group ">
+              <div class="card h-100">
+                <img [src]="item.image_url" class="card-img-top rounded-circle position-absolute" [alt]="item.title">
+          <div class="card-body ">
+            <div class="allcard">
+            <h5 class="card-title">{{item.title.split(" ").slice(0,3).join(" ")}}</h5>
+            <p class="card-text"><i [style.color]="(item.social_rank/10)/2 >= num?'yellow':'none'" *ngFor="let num of [1,2,3,4,5]" class="fa-solid fa-star"></i></p>
+            <h6> {{ (item.social_rank/0.7).toString().slice(5,8) | currency:'  ' }} EGP</h6>
+            <button class="btn addbtn" (click)="addCart(item)" >Add To Cart</button>
+          </div>
+          </div>
+              </div>
+            </div>
+         
+          </ng-template>
+        </ng-container>
+    
+      </owl-carousel-o>
+     
+      <button class="btn seemore" routerLink="/pizza">See More...</button>
+   
+  
+  </section>
+  
+  <br><br><br><br>
+
+  <!--Pasta Carsoul-->
+<section class="details">
+ 
+    <div class="wrapper two">
+      <div class="neon">
+        <h1 class="d-flex justify-content-center"><img class="img-icon" src="./assets/Food Images/spaghetti_11188266.gif">PASTA</h1>
+      </div>
+  </div>
+  
+  <owl-carousel-o [options]="foodOptions">
+  
+    <ng-container *ngFor="let item of somePasta.slice(0,10)">
+      <ng-template carouselSlide >
+        <div class="card-group ">
+          <div class="card h-100">
+            <img [src]="item.image_url" class="card-img-top rounded-circle position-absolute" [alt]="item.title">
+      <div class="card-body ">
+        <div class="allcard">
+        <h5 class="card-title">{{item.title.split(" ").slice(0,3).join(" ")}}</h5>
+        <p class="card-text"><i [style.color]="(item.social_rank/10)/2 >= num?'yellow':'none'" *ngFor="let num of [1,2,3,4,5]" class="fa-solid fa-star"></i></p>
+        <h6> {{ (item.social_rank/0.7).toString().slice(5,8) | currency:'  ' }} EGP</h6>
+        <button class="btn addbtn" (click)="addCart(item)" >Add To Cart</button>
+      </div>
+      </div>
+          </div>
+        </div>
+     
+      </ng-template>
+    </ng-container>
+  
+  </owl-carousel-o>
+   
+    <button class="btn seemore" routerLink="/pasta">See More...</button>
+  
+  
+  </section>
+   
+  <br><br><br><br>
+  
+  <!--Salad Carsoul-->
+  <section class="details">
+   
+    <div class="wrapper two">
+      <div class="neon">
+        <h1 class="d-flex justify-content-center"><img class="img-icon" src="./assets/Food Images/salad_17507062.gif">SALAD</h1>
+      </div>
+  </div>
+  
+  
+  <owl-carousel-o [options]="foodOptions">
+  
+    <ng-container *ngFor="let item of someSalad.slice(0,10)">
+      <ng-template carouselSlide >
+        <div class="card-group ">
+          <div class="card h-100">
+            <img [src]="item.image_url" class="card-img-top rounded-circle position-absolute" [alt]="item.title">
+      <div class="card-body ">
+        <div class="allcard">
+        <h5 class="card-title">{{item.title.split(" ").slice(0,3).join(" ")}}</h5>
+        <p class="card-text"><i [style.color]="(item.social_rank/10)/2 >= num?'yellow':'none'" *ngFor="let num of [1,2,3,4,5]" class="fa-solid fa-star"></i></p>
+        <h6> {{ (item.social_rank/0.7).toString().slice(5,8) | currency:'  ' }} EGP</h6>
+        <button class="btn addbtn" (click)="addCart(item)" >Add To Cart</button>
+      </div>
+      </div>
+          </div>
+        </div>
+     
+      </ng-template>
+    </ng-container>
+  
+  </owl-carousel-o>
+   
+    <button class="btn seemore" routerLink="/salad">See More...</button>
+  
+  </section>
+  
+  <br><br><br><br>
+  
+  <!--STEAK Carsoul-->
+  <section class="details">
+   
+    <div class="wrapper two">
+      <div class="neon">
+        <h1 class="d-flex justify-content-center"><img class="img-icon" src="./assets/Food Images/steak_16768869.gif">STEAK</h1>
+      </div>
+  </div>
+  
+  
+  <owl-carousel-o [options]="foodOptions">
+  
+    <ng-container *ngFor="let item of someSteak.slice(0,10)">
+      <ng-template carouselSlide >
+        <div class="card-group ">
+          <div class="card h-100">
+            <img [src]="item.image_url" class="card-img-top rounded-circle position-absolute" [alt]="item.title">
+      <div class="card-body ">
+        <div class="allcard">
+        <h5 class="card-title">{{item.title.split(" ").slice(0,3).join(" ")}}</h5>
+        <p class="card-text"><i [style.color]="(item.social_rank/10)/2 >= num?'yellow':'none'" *ngFor="let num of [1,2,3,4,5]" class="fa-solid fa-star"></i></p>
+        <h6> {{ (item.social_rank/0.7).toString().slice(5,8) | currency:'  ' }} EGP</h6>
+        <button class="btn addbtn" (click)="addCart(item)" >Add To Cart</button>
+      </div>
+      </div>
+          </div>
+        </div>
+     
+      </ng-template>
+    </ng-container>
+  
+  </owl-carousel-o>
+    <button class="btn seemore" routerLink="/steak">See More...</button>
+  
+  </section>
+  
+  <br><br><br><br>
+  
+  <!--Chicken Carsoul-->
+  <section class="details">
+   
+    <div class="wrapper two">
+      <div class="neon">
+        <h1 class="d-flex justify-content-center"><img class="img-icon" src="./assets/Food Images/turkey-leg_12707165.gif">CHICKEN</h1>
+      </div>
+  </div>
+  
+  <owl-carousel-o [options]="foodOptions">
+  
+    <ng-container *ngFor="let item of someChicken.slice(0,10)">
+      <ng-template carouselSlide >
+        <div class="card-group ">
+          <div class="card h-100">
+            <img [src]="item.image_url" class="card-img-top rounded-circle position-absolute" [alt]="item.title">
+      <div class="card-body ">
+        <div class="allcard">
+        <h5 class="card-title">{{item.title.split(" ").slice(0,3).join(" ")}}</h5>
+        <p class="card-text"><i [style.color]="(item.social_rank/10)/2 >= num?'yellow':'none'" *ngFor="let num of [1,2,3,4,5]" class="fa-solid fa-star"></i></p>
+        <h6> {{ (item.social_rank/0.7).toString().slice(5,8) | currency:'  ' }} EGP</h6>
+        <button class="btn addbtn" (click)="addCart(item)" >Add To Cart</button>
+      </div>
+      </div>
+          </div>
+        </div>
+     
+      </ng-template>
+    </ng-container>
+  
+  </owl-carousel-o>
+   
+    <button class="btn seemore" routerLink="/chicken">See More...</button>
+  
+  </section>
+  
+  <br><br><br><br>
+  
+  <!--SeaFOOD Carsoul-->
+  <section class="details">
+   
+    <div class="wrapper two">
+      <div class="neon">
+        <h1 class="d-flex justify-content-center"><img class="img-icon" src="./assets/Food Images/pisces_12988921.gif">SEA FOOD</h1>
+      </div>
+  </div>
+  
+  
+  <owl-carousel-o [options]="foodOptions">
+  
+    <ng-container *ngFor="let item of someSeaFood.slice(0,10)">
+      <ng-template carouselSlide >
+        <div class="card-group ">
+          <div class="card h-100">
+            <img [src]="item.image_url" class="card-img-top rounded-circle position-absolute" [alt]="item.title">
+      <div class="card-body ">
+        <div class="allcard">
+        <h5 class="card-title">{{item.title.split(" ").slice(0,3).join(" ")}}</h5>
+        <p class="card-text"><i [style.color]="(item.social_rank/10)/2 >= num?'yellow':'none'" *ngFor="let num of [1,2,3,4,5]" class="fa-solid fa-star"></i></p>
+        <h6> {{ (item.social_rank/0.7).toString().slice(5,8) | currency:'  ' }} EGP</h6>
+        <button class="btn addbtn" (click)="addCart(item)" >Add To Cart</button>
+      </div>
+      </div>
+          </div>
+        </div>
+     
+      </ng-template>
+    </ng-container>
+  
+  </owl-carousel-o>
+   
+    <button class="btn seemore" routerLink="/seaFood">See More...</button>
+  
+  </section>
+  
+  <br><br><br><br>
+  
+  <!--Fries Carsoul-->
+  <section class="details">
+   
+    <div class="wrapper two">
+      <div class="neon">
+        <h1 class="d-flex justify-content-center"><img class="img-icon" src="./assets/Food Images/fries_15407630.gif">FRIES</h1>
+      </div>
+  </div>
+  
+  
+  <owl-carousel-o [options]="foodOptions">
+  
+    <ng-container *ngFor="let item of someFries.slice(0,10)">
+      <ng-template carouselSlide >
+        <div class="card-group ">
+          <div class="card h-100">
+            <img [src]="item.image_url" class="card-img-top rounded-circle position-absolute" [alt]="item.title">
+      <div class="card-body ">
+        <div class="allcard">
+        <h5 class="card-title">{{item.title.split(" ").slice(0,3).join(" ")}}</h5>
+        <p class="card-text"><i [style.color]="(item.social_rank/10)/2 >= num?'yellow':'none'" *ngFor="let num of [1,2,3,4,5]" class="fa-solid fa-star"></i></p>
+        <h6> {{ (item.social_rank/0.7).toString().slice(5,8) | currency:'  ' }} EGP</h6>
+        <button class="btn addbtn" (click)="addCart(item)" >Add To Cart</button>
+      </div>
+      </div>
+          </div>
+        </div>
+     
+      </ng-template>
+    </ng-container>
+  
+  </owl-carousel-o>
+   
+    <button class="btn seemore" routerLink="/fries">See More...</button>
+  
+  </section>
+  
+  <br><br><br><br>

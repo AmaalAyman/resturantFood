@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+        <img class="navimg" src="./assets/Food Images/food_2771379.png">             
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav me-5 mb-2 mb-lg-0 mx-auto ">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="bg-item">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/pizza" routerLinkActive="bg-item">Pizza</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/pasta" routerLinkActive="bg-item">Pasta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/salad" routerLinkActive="bg-item">Salad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/steak" routerLinkActive="bg-item">Steak</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/chicken" routerLinkActive="bg-item">Chicken</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/seafood" routerLinkActive="bg-item">SeaFood</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/fries" routerLinkActive="bg-item">Fries</a>
+          </li>          
+       
+        </ul>
+
+        <ul class="navbar-nav " class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart" routerLinkActive="cartActive"><i class="cart fa-solid fa-cart-shopping"></i></a>
+          </li> 
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-gear ms-3"></i> setting
+                </button>
+                <ul class="dropdown-menu ">
+                  <li><a class="dropdown-item" routerLink="/profile">Profile</a></li>
+                  <li><a class="dropdown-item" (click)="logOut()">SingOut</a></li>
+                </ul>
+              </div>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+
+
+
